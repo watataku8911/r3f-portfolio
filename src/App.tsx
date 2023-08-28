@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(true);
-    }, 2500);
+    }, 4500);
   }, [loading]);
 
   const macbook = useGLTF(
