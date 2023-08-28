@@ -5,8 +5,7 @@ import {
   Float,
   Html,
   PresentationControls,
-  useGLTF,
-  Text,
+  useGLTF
 } from "@react-three/drei";
 
 function App() {
