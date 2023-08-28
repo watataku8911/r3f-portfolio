@@ -5,8 +5,8 @@ import {
   Float,
   Html,
   PresentationControls,
-  Text,
   useGLTF,
+  Text,
 } from "@react-three/drei";
 
 function App() {
@@ -16,7 +16,10 @@ function App() {
 
   return (
     <>
-      <Canvas camera={{ fov: 60, near: 0.1, far: 300 }}>
+      <Canvas
+        camera={{ fov: 70, near: 1.1, far: 3000 }}
+        style={{ width: "100vw", height: "100vh" }}
+      >
         <color args={["#5bbee5"]} attach={"background"} />
         <ambientLight />
         <PresentationControls
@@ -24,7 +27,7 @@ function App() {
           config={{ mass: 2, tension: 400 }}
           snap={{ mass: 4, tension: 300 }}
         >
-          <Float rotationIntensity={2.5}>
+          <Float rotationIntensity={1.5}>
             <rectAreaLight
               color={"#5bbee5"}
               intensity={55}
@@ -35,7 +38,7 @@ function App() {
             />
             <primitive
               object={macbook.scene}
-              position={[0.5, -1.3, 0.3]}
+              position={[0.3, -1, 0.9]}
               rotation-y={0.5}
               rotation-x={0.5}
             >
